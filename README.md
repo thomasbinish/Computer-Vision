@@ -12,4 +12,4 @@ Create DLTK client to perform different task.
 
 `client = dltk_ai.DltkAiClient('Your API Key')`
 
-To use this services, one need to register to dltk website and create a project. Copy your API key to use different APIs.
+To use this services, one need to register to dltk [website](https://dev.dltk.ai/sign_up/) and create a project. Copy your API key to use different APIs.
