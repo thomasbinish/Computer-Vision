@@ -2,12 +2,27 @@
 ## Description
 DLTK Computer Vision enables you to find meaning in visual content! Analyze images for scenes, objects, faces, and other content. Choose a default model off the shelf, or create your own custom classifier. Develop smart applications that analyze the visual content of images or video frames to understand what is happening in a scene.
 
-### Features provided
+## Features provided
 DLTK Computer Vision Module provides the following APIs as of now:
 1. **Face Detection Image/ JSON**: Uses HaarCascade algorigthm to detect and save the location of the detected face. Depending on the request used, it will either server those co-ordinates in json format or in base64 encoded image. 
 2. **Object Detection Image/ JSON**: 
 3. **Image Classification**: Used pre-trained InceptionV3 Model which is a convolutional neural network having 48 hidden layers. The pretrained network can classify images into 1000 object categories, such as keyboard, mouse, pencil, and many animals. The network has an image input size of 299-by-299.
 4. **License Plate Detection Image/ JSON**: Used Haarcascade Classifier trained on automobile license plates. Depending on the request used we can extract the JSON which contains the co-ordinates of the license plate or the image containing the license encoded in base64 string.
+
+## Demo
+
+**Face Detection**
+![face detection](https://github.com/dltk-ai/Computer-Vision/blob/master/CVimages/group.jpg)
+![face detection](https://github.com/dltk-ai/Computer-Vision/blob/master/CVimages/face_detect.jpeg)
+
+**Object Detection**
+![Object Detection](https://github.com/dltk-ai/Computer-Vision/blob/master/CVimages/japan.jpg)
+![Object Detection](https://github.com/dltk-ai/Computer-Vision/blob/master/CVimages/image%20(1).jpg)
+
+**License plate detection**
+![License plate detection](https://github.com/dltk-ai/Computer-Vision/blob/master/CVimages/license.jpeg)
+![License plate detection](https://github.com/dltk-ai/Computer-Vision/blob/master/CVimages/out.jpg)
+
 
 # Motivation
 This Repository is created to show how DLTK computer vision API uses advanced deep learning algorithms to analyze images and videos for scenes, objects, faces, licence plates and other content. For example, you upload a photograph and service detects different objects in a photograph. You can use the default model from DLTK.AI or create your own custom classifier.
@@ -53,15 +68,6 @@ JSON:
 `curl --location --request POST 'http://0.0.0.0:8187/dltk-vision/image-classification' \
 --form 'image=@image_path'`
 
-
-**License plate detection API:**
-`curl --location --request POST 'http://0.0.0.0:8187/dltk-vision/licence-plate/json' \
---form 'image=@image_path'`
-
-JSON:
-
-`curl --location --request POST 'http://0.0.0.0:8187/dltk-vision/licence-plate/image \
---form 'image=@image_path'`
 
 
 **Option-2**: Executing ***dltk-vision-core*** as a docker container.
