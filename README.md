@@ -5,7 +5,7 @@ DLTK Computer Vision enables you to find meaning in visual content! Analyze imag
 ## Features provided
 DLTK Computer Vision Module provides the following APIs as of now:
 1. **Face Detection Image/ JSON**: Uses HaarCascade algorigthm to detect and save the location of the detected face. Depending on the request used, it will either server those co-ordinates in json format or in base64 encoded image. 
-2. **Object Detection Image/ JSON**: 
+2. **Object Detection Image/ JSON**: Detect multiple objects in the same image using RetinaNet-50. It also tags the objects and shows their location within the image. 
 3. **Image Classification**: Used pre-trained InceptionV3 Model which is a convolutional neural network having 48 hidden layers. The pretrained network can classify images into 1000 object categories, such as keyboard, mouse, pencil, and many animals. The network has an image input size of 299-by-299.
 4. **License Plate Detection Image/ JSON**: Used Haarcascade Classifier trained on automobile license plates. Depending on the request used we can extract the JSON which contains the co-ordinates of the license plate or the image containing the license encoded in base64 string.
 
@@ -33,7 +33,7 @@ This Repository is created to show how DLTK computer vision API uses advanced de
 2. [OpenCV](https://opencv.org/): Library of programming functions mainly aimed at real-time computer vision.
 3. [InceptionV3](https://keras.io/api/applications/inceptionv3/): convolutional neural network having 48 hidden layers. The pretrained network can classify images into 1000 object categories, such as keyboard, mouse, pencil, and many animals.
 4. [RetinaNet-50](https://keras.io/examples/vision/retinanet/): a popular single-stage detector, which is accurate and runs fast. RetinaNet uses a feature pyramid network to efficiently detect objects at multiple scales and introduces a new loss, the Focal loss function, to alleviate the problem of the extreme foreground-background class imbalance.
-5. [Haar Cascade](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_objdetect/py_face_detection/py_face_detection.html): 
+5. [Haar Cascade](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_objdetect/py_face_detection/py_face_detection.html): Machine learning based approach where a cascade function is trained from a lot of positive and negative images. It is then used to detect objects in other images.
 
 ## How to use?
 **Option-1**: Executing ***dltk-vision-core*** as a service. 
