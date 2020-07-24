@@ -38,6 +38,7 @@ JSON:
 `curl --location --request POST 'http://0.0.0.0:8187/dltk-vision/face-detection/json' \
 --form 'image=@image_path'`
 
+
 **Object detection API:**
 `curl --location --request POST 'http://0.0.0.0:8187/dltk-vision/object-detection/image' \
 --form 'image=@image_path'`
@@ -47,9 +48,11 @@ JSON:
 `curl --location --request POST 'http://0.0.0.0:8187/dltk-vision/object-detection/json' \
 --form 'image=@image_path'`
 
+
 **Image classification API:**
 `curl --location --request POST 'http://0.0.0.0:8187/dltk-vision/image-classification' \
 --form 'image=@image_path'`
+
 
 **License plate detection API:**
 `curl --location --request POST 'http://0.0.0.0:8187/dltk-vision/licence-plate/json' \
@@ -59,6 +62,7 @@ JSON:
 
 `curl --location --request POST 'http://0.0.0.0:8187/dltk-vision/licence-plate/image \
 --form 'image=@image_path'`
+
 
 **Option-2**: Executing ***dltk-vision-core*** as a docker container.
 
