@@ -10,7 +10,7 @@ chardet==3.0.4
 contextlib2==0.5.5
 cycler==0.10.0
 Cython==0.29.7
-Django==1.11
+Django==1.11.29
 dnspython==1.16.0
 enum34==1.1.10
 eureka-client==0.6.2
