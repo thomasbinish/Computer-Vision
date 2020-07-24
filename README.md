@@ -87,7 +87,7 @@ Steps:
 2. Go to the path where docker-compose.yml is placed.
 3. Run the command to start the container `sudo docker-compose up -d`
 4. Now check the containers `sudo docker ps`
-![docker-output](https://github.com/dltk-ai/Natural-Language-Processing/blob/master/docker.png)
+![docker-output](https://github.com/dltk-ai/Computer-Vision/blob/master/CVimages/docker-cv.png)
 5. Execute the CURL Command mentioned in option-1
 6. Run the command to stop the container `sudo docker-compose down`
 
