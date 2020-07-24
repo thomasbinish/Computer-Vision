@@ -1,128 +1,91 @@
-# DLTK-VISION-CORE
-
 # Computer Vision
-Computer Vision is a field of Artificial Intelligence that deals with understanding and implementing aspects of the Visual World. It applies deep learning models on Images and Videos to identify , interpret , classify and modify visual information.
-DLTK Computer Vision Module provides the following APIs for now:
- - Face Detection Image / JSON
- - Object Detection Image / JSON
- -  Image Classification
- - License Plate Detection Image / JSON
+## Description
+DLTK Computer Vision enables you to find meaning in visual content! Analyze images for scenes, objects, faces, and other content. Choose a default model off the shelf, or create your own custom classifier. Develop smart applications that analyze the visual content of images or video frames to understand what is happening in a scene.
+
+### Features provided
+DLTK Computer Vision Module provides the following APIs as of now:
+1. **Face Detection Image/ JSON**: Uses HaarCascade algorigthm to detect and save the location of the detected face. Depending on the request used, it will either server those co-ordinates in json format or in base64 encoded image. 
+2. **Object Detection Image/ JSON**: 
+3. **Image Classification**: Used pre-trained InceptionV3 Model which is a convolutional neural network having 48 hidden layers. The pretrained network can classify images into 1000 object categories, such as keyboard, mouse, pencil, and many animals. The network has an image input size of 299-by-299.
+4. **License Plate Detection Image/ JSON**: Used Haarcascade Classifier trained on automobile license plates. Depending on the request used we can extract the JSON which contains the co-ordinates of the license plate or the image containing the license encoded in base64 string.
 
 # Motivation
-We wanted to provide a an easy to use toolkit for Computer Vision tasks.
+This Repository is created to show how DLTK computer vision API uses advanced deep learning algorithms to analyze images and videos for scenes, objects, faces, licence plates and other content. For example, you upload a photograph and service detects different objects in a photograph. You can use the default model from DLTK.AI or create your own custom classifier.
 
-# Framework
-We used Django for this project.
+# Frameworks/ Tech Stack used
+1. [Django](https://www.djangoproject.com/) : Python-based open-source web framework that follows the model-view-template (MVT) architectural pattern.
+2. [OpenCV](https://opencv.org/): Library of programming functions mainly aimed at real-time computer vision.
+3. [InceptionV3](https://keras.io/api/applications/inceptionv3/): convolutional neural network having 48 hidden layers. The pretrained network can classify images into 1000 object categories, such as keyboard, mouse, pencil, and many animals.
+4. [RetinaNet-50](https://keras.io/examples/vision/retinanet/): a popular single-stage detector, which is accurate and runs fast. RetinaNet uses a feature pyramid network to efficiently detect objects at multiple scales and introduces a new loss, the Focal loss function, to alleviate the problem of the extreme foreground-background class imbalance.
+5. [Haar Cascade](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_objdetect/py_face_detection/py_face_detection.html): 
+
+## How to use?
+**Option-1**: Executing ***dltk-vision-core*** as a service. 
+
+1. Clone the repository
+2. Install all the required dependencies.
+`pip install requirements.txt` 
+3. Open command prompt/Terminal and run the django server 
+`python manage.py runserver 0.0.0.0:8187`
+4. Start using the APIs listed below:
+
+**Face detection API:**
+`curl --location --request POST 'http://0.0.0.0:8187/dltk-vision/face-detection/image' \
+--form 'image=@image_path'`
+JSON:
+`curl --location --request POST 'http://0.0.0.0:8187/dltk-vision/face-detection/json' \
+--form 'image=@image_path'`
+
+**Object detection API:**
+`curl --location --request POST 'http://0.0.0.0:8187/dltk-vision/object-detection/image' \
+--form 'image=@image_path'`
+JSON:
+`curl --location --request POST 'http://0.0.0.0:8187/dltk-vision/object-detection/json' \
+--form 'image=@image_path'`
+
+**Image classification API:**
+`curl --location --request POST 'http://0.0.0.0:8187/dltk-vision/image-classification' \
+--form 'image=@image_path'`
+
+**License plate detection API:**
+`curl --location --request POST 'http://0.0.0.0:8187/dltk-vision/licence-plate/json' \
+--form 'image=@image_path'`
+JSON:
+`curl --location --request POST 'http://0.0.0.0:8187/dltk-vision/licence-plate/image \
+--form 'image=@image_path'`
+
+**Option-2**: Executing ***dltk-vision-core*** as a docker container.
+
+**Docker**: Docker is an advanced OS virtualization software platform that makes it easier to create, deploy, and run applications in a Docker container.
+
+Install Docker by following this [link](https://docs.docker.com/get-docker/).
+
+**Docker compose**: Docker Compose is that users can activate all the services (containers) using a single command.
+
+Install Docker Compose by following this [link](https://docs.docker.com/compose/install/)
+
+Steps:
+
+1. Clone the repository;
+2. Go to the path where docker-compose.yml is placed.
+3. Run the command to start the container `sudo docker-compose up -d`
+4. Now check the containers `sudo docker ps`
+![docker-output](https://github.com/dltk-ai/Natural-Language-Processing/blob/master/docker.png)
+5. Execute the CURL Command mentioned in option-1
+6. Run the command to stop the container `sudo docker-compose down`
 
 
-Django is a high-level Python framework. It is free and open-source, written in Python itself, and follows the model-view-template architectural pattern. We can use it to develop quality web applications faster and easier. Since developing for the web needs a set of similar components, you can use a framework. This way, you don’t have to reinvent the wheel. These tasks include authentication, forms, uploading files, management panels, and so.
-# How to Run
-1. Clone this repository.
-2. Install the requirements using -
-```sh
-pip install -r requirements.txt
-```
 
-3. Run this repository from the the dltk-vision-core directory using- 
-```sh
-python manage.py runserver
-```
-4. Checkout the file for all possible to requests and formats to the project.
+## Lead Maintainer
+[![](https://github.com/shreeramiyer.png?size=50)](https://github.com/shreeramiyer)
+## Core Mainteiners
+[![](https://github.com/dltk-ai.png?size=50)](https://github.com/dltk-ai)
+## Core Contributers 
+[![](https://github.com/GHub4Naveen.png?size=50)](https://github.com/GHub4Naveen)
+[![](https://github.com/SivaramVeluri15.png?size=50)](https://github.com/SivaramVeluri15)
+[![](https://github.com/vishnupeesapati.png?size=50)](https://github.com/vishnupeesapati)
+[![](https://github.com/EpuriHarika.png?size=50)](https://github.com/EpuriHarika/)
+[![](https://github.com/nageshsinghc4.png?size=50)](https://github.com/nageshsinghc4)
+[![](https://github.com/appareddyraja.png?size=50)](https://github.com/appareddyraja)
 
-
-# Output
-
-##  Face-Detection:
-Face-Detection module uses HaarCascade algorigthm to detect and save the location of the detected face. Depending on the request used, it will either server those co-ordinates in json format or in base64 encoded image. 
-### JSON
-#### Request:
-
-> http://127.0.0.1:8000/dltk-vision/face-detection/json
-
-#### Response:
->
->{
->    "faces": [
->        {
->            "y": 102,
->            "x": 653,
->            "height": 39,
->            "width": 39
->        }
->}
-
-The reponse gives the positions of faces across the image embedded in the POST Request
-
-### Image
-#### Request:
-
-> http://127.0.0.1:8000/dltk-vision/face-detection/image
-
-#### Response:
-Insert Image here
-
-The reponse gives the positions of faces across the image embedded in the POST Request
-
-## Licence Plate Detection
-We are detecting License plate using haarcascade Classifier trained on automobile license plates. Depending on the request used we can extract the JSON which contains the co-ordinates of the license plate or the image containing the license encoded in base64 string.
-### Image
-#### Request:
-
-> http://127.0.0.1:8000/dltk-vision/licence-plate/json
-
-#### Response:
-insert image here
-
-The reponse gives the co-ordinates of the license plates present  across the image embedded in the POST Request.
-
-### JSON
-#### Request:
-
-> http://127.0.0.1:8000/dltk-vision/licence-plate/json
-
-#### Response:
-(sample output)
->{'y': 146, 'x': 132, 'height': 29, 'width': 114
->}
-
-The reponse gives the co-ordinates of the license plates present  across the image embedded in the POST Request.
-
-## Image Classification
-We are using pre-trained InceptionV3 Model.Inception-v3 is a convolutional neural network that is 48 layers deep. You can load a pretrained version of the network trained on more than a million images from the ImageNet database. The pretrained network can classify images into 1000 object categories, such as keyboard, mouse, pencil, and many animals. As a result, the network has learned rich feature representations for a wide range of images. The network has an image input size of 299-by-299.
-#### Request:
-
-> http://127.0.0.1:8000/dltk-vision/image-classification
-
-#### Response:
-(sample output)
->{
->    "unicycle": "20.3%",
->    "jersey": "13.5%",
->    "knee_pad": "5.4%"
->}
-
-The reponse gives the objects present  across the image embedded in the POST Request.
-
-## Object Detection
-
-### Image
-#### Request:
-
-> http://127.0.0.1:8000/dltk-vision/licence-plate/json
-
-#### Response:
-insert image here
-
-The reponse gives the co-ordinates of the license plates present  across the image embedded in the POST Request.
-
-### JSON
-#### Request:
-
-> http://127.0.0.1:8000/dltk-vision/licence-plate/json
-
-#### Response:
-(sample output)
->{'y': 146, 'x': 132, 'height': 29, 'width': 114
->}
-
-The reponse gives the co-ordinates of the license plates present  across the image embedded in the POST Request.
+## License
