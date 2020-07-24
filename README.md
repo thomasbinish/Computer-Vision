@@ -20,6 +20,7 @@ DLTK Computer Vision Module provides the following APIs as of now:
 ![Object Detection](https://github.com/dltk-ai/Computer-Vision/blob/master/CVimages/image%20(1).jpg)
 
 **License plate detection**
+
 ![License plate detection](https://github.com/dltk-ai/Computer-Vision/blob/master/CVimages/license.jpeg)
 ![License plate detection](https://github.com/dltk-ai/Computer-Vision/blob/master/CVimages/out.jpg)
 
