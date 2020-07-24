@@ -32,14 +32,18 @@ This Repository is created to show how DLTK computer vision API uses advanced de
 **Face detection API:**
 `curl --location --request POST 'http://0.0.0.0:8187/dltk-vision/face-detection/image' \
 --form 'image=@image_path'`
+
 JSON:
+
 `curl --location --request POST 'http://0.0.0.0:8187/dltk-vision/face-detection/json' \
 --form 'image=@image_path'`
 
 **Object detection API:**
 `curl --location --request POST 'http://0.0.0.0:8187/dltk-vision/object-detection/image' \
 --form 'image=@image_path'`
+
 JSON:
+
 `curl --location --request POST 'http://0.0.0.0:8187/dltk-vision/object-detection/json' \
 --form 'image=@image_path'`
 
@@ -50,7 +54,9 @@ JSON:
 **License plate detection API:**
 `curl --location --request POST 'http://0.0.0.0:8187/dltk-vision/licence-plate/json' \
 --form 'image=@image_path'`
+
 JSON:
+
 `curl --location --request POST 'http://0.0.0.0:8187/dltk-vision/licence-plate/image \
 --form 'image=@image_path'`
 
