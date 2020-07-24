@@ -36,6 +36,14 @@ This Repository is created to show how DLTK computer vision API uses advanced de
 5. [Haar Cascade](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_objdetect/py_face_detection/py_face_detection.html): Machine learning based approach where a cascade function is trained from a lot of positive and negative images. It is then used to detect objects in other images.
 
 ## How to use?
+
+Before executing this project, first, we need to download the models used for Computer Vision tasks in the existing repository. Due to the sheer size of the models, we decided not to use GitHub and store in Amazon S3 buckets.
+
+To download the models-
+`wget https://dltk-ai-prod.s3.ap-south-1.amazonaws.com/computer_vision_models/resources.zip`
+
+Then the 'resources.zip' needs to unzipped inside the Computer-Vision repository. The unzipped directory 'resources' contains all models that we use in this repository.
+
 **Option-1**: Executing ***dltk-vision-core*** as a service. 
 
 1. Clone the repository
