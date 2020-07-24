@@ -1,0 +1,14 @@
+version: "3"
+services:
+  dltk-computer-vision:
+    build: .
+    image: "dltk-computer-vision"
+    container_name: dltk-computer-vision
+    command: >
+      sh -c "rabbitmq-server &
+             python manage.py migrate &
+             python manage.py runserver 0.0.0.0:8187 --noreload &
+             cd /dltk-vision-python/dltk_vision & celery -A dltk_vision worker -l info"
+    restart: always
+    ports:
+      - "8187:8187"
