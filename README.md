@@ -99,14 +99,14 @@ Steps:
 5. Execute the CURL Command mentioned in option-1
 6. Run the command to stop the container `sudo docker-compose down`
 
-
+## Founding Members
+[![](https://github.com/shreeramiyer.png?size=50)](https://github.com/shreeramiyer)
 
 ## Lead Maintainer
-[![](https://github.com/shreeramiyer.png?size=50)](https://github.com/shreeramiyer)
+[![](https://github.com/GHub4Naveen.png?size=50)](https://github.com/GHub4Naveen)
 ## Core Mainteiners
 [![](https://github.com/dltk-ai.png?size=50)](https://github.com/dltk-ai)
 ## Core Contributers 
-[![](https://github.com/GHub4Naveen.png?size=50)](https://github.com/GHub4Naveen)
 [![](https://github.com/SivaramVeluri15.png?size=50)](https://github.com/SivaramVeluri15)
 [![](https://github.com/vishnupeesapati.png?size=50)](https://github.com/vishnupeesapati)
 [![](https://github.com/EpuriHarika.png?size=50)](https://github.com/EpuriHarika/)
